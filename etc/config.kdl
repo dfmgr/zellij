@@ -245,9 +245,13 @@ keybinds clear-defaults=true {
 
         // Keybindings help (? shows keybinds.md in floating pane)
         bind "?" {
-            Run "less" "$HOME/.config/zellij/keybinds.md" {
+            Run "bash" "-c" "less ~/.config/zellij/keybinds.md" {
                 floating true
                 close_on_exit true
+                x "5%"
+                y "5%"
+                width "90%"
+                height "90%"
             }
             SwitchToMode "Normal"
         }

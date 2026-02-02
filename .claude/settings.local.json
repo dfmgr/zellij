@@ -9,7 +9,9 @@
       "Bash(zellij options:*)",
       "WebFetch(domain:jcd.pub)",
       "Bash(zellij action:*)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(bash -c 'curl -s wttr.in?format=3 2>/dev/null | cut -d: -f2 | xargs')",
+      "Bash(bash -c 'loc=${MYLOCATION_ZIP:-${MYLOCATION_NAME:-}}; curl -q -LSsf \"\"wthr.top/${loc}?format=3\"\" 2>/dev/null | cut -d: -f2 | xargs')"
     ]
   }
 }

@@ -12,7 +12,7 @@ layout {
                 // Right: weather, uptime, datetime
                 format_left   "{mode}#[fg=#44475a,bg=#282a36]#[fg=#f8f8f2,bg=#44475a] {session} #[fg=#44475a,bg=#282a36]#[fg=#8be9fd,bg=#282a36] {command_user}@{command_host} #[fg=#f1fa8c]{command_git}"
                 format_center "{tabs}"
-                format_right  "{command_weather}#[fg=#6272a4,bg=#282a36]│ #[fg=#ffb86c]UP:{command_uptime} #[fg=#6272a4]│ #[fg=#8be9fd]{datetime}"
+                format_right  "{command_weather}#[fg=#6272a4,bg=#282a36]│ {command_uptime}#[fg=#6272a4]│ #[fg=#8be9fd]{datetime}"
                 format_space  "#[bg=#282a36] "
                 format_hide_on_overlength "true"
                 format_precedence "crl"
@@ -95,14 +95,15 @@ layout {
                 command_git_rendermode   "static"
 
                 // Weather (like tmux-statusbar weather)
-                command_weather_command  "curl -s 'wttr.in/?format=%c%t' 2>/dev/null | tr -d '\\n' | head -c 15 || echo ''"
-                command_weather_format   "#[fg=#ff79c6]{stdout} "
+                // Uses MYLOCATION_ZIP, then MYLOCATION_NAME, then auto-detect
+                command_weather_command  "bash -c 'loc=${MYLOCATION_ZIP:-${MYLOCATION_NAME:-}}; curl -q -LSsf \"wthr.top/${loc}?format=3\" 2>/dev/null | cut -d: -f2 | xargs'"
+                command_weather_format   "#[fg=#ff79c6]{stdout}"
                 command_weather_interval "600"
                 command_weather_rendermode "static"
 
                 // Uptime (like tmux uptime)
-                command_uptime_command   "uptime | sed 's/.*up //' | sed 's/,.*//' | sed 's/^ *//' | tr -d '\\n' | head -c 10"
-                command_uptime_format    "{stdout}"
+                command_uptime_command   "uptime -p"
+                command_uptime_format    "#[fg=#ffb86c]{stdout}"
                 command_uptime_interval  "60"
                 command_uptime_rendermode "static"
 
