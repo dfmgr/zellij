@@ -12,8 +12,8 @@ theme "dracula"
 // Default shell
 default_shell "bash"
 
-// Default layout (uses zjstatus for custom status bar)
-default_layout "default"
+// Default layout (use built-in compact-bar)
+default_layout "compact"
 
 // Default mode (locked requires prefix to interact, normal doesn't)
 default_mode "normal"
@@ -61,9 +61,9 @@ scrollback_editor "vim"
 // Styled underlines (requires terminal support)
 styled_underlines true
 
-// UI tips and notes
-show_startup_tips true
-show_release_notes true
+// UI tips and notes (disabled)
+show_startup_tips false
+show_release_notes false
 
 // Action when receiving SIGTERM/SIGINT/SIGQUIT/SIGHUP
 on_force_close "detach"
@@ -241,11 +241,11 @@ keybinds clear-defaults=true {
             SwitchToMode "Normal"
         }
 
-        // Configuration plugin
+        // Keybindings help (? shows keybinds.md in floating pane)
         bind "?" {
-            LaunchOrFocusPlugin "configuration" {
+            Run "less" "$HOME/.config/zellij/keybinds.md" {
                 floating true
-                move_to_focused_tab true
+                close_on_exit true
             }
             SwitchToMode "Normal"
         }

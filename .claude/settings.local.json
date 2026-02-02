@@ -7,7 +7,8 @@
       "Bash(zellij setup:*)",
       "Bash(zellij --help:*)",
       "Bash(zellij options:*)",
-      "WebFetch(domain:jcd.pub)"
+      "WebFetch(domain:jcd.pub)",
+      "Bash(zellij action:*)"
     ]
   }
 }
