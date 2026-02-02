@@ -184,14 +184,7 @@ PHP_COMPOSER=""
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Show a custom message after install
 __run_post_message() {
-  if __cmd_exists zellij; then
-    printf_green "zellij installed successfully!"
-    printf_cyan "Add to ~/.bashrc for auto tab naming:"
-    printf_white "  source ~/.config/zellij/shell/zellij.sh"
-    printf_cyan "Usage:"
-    printf_white "  zj        - Start session named after directory"
-    printf_white "  Ctrl+Space - Enter prefix mode"
-  fi
+  true
 }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Define pre-install scripts
