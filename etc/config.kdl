@@ -178,6 +178,13 @@ keybinds clear-defaults=true {
         // Session management
         bind "d" { Detach; }
         bind "Tab" { SwitchToMode "Session"; }
+        bind "$" {
+            LaunchOrFocusPlugin "session-manager" {
+                floating true
+                move_to_focused_tab true
+            }
+            SwitchToMode "Normal"
+        }
 
         // Tab (window) management
         bind "t" { NewTab; SwitchToMode "Normal"; }

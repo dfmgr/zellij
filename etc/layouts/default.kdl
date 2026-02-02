@@ -33,7 +33,7 @@ layout {
                 // Tmux mode = PRE (purple, prefix active)
                 // Scroll = COPY (yellow like tmux copy mode)
                 // Locked = LOCK (red)
-                mode_normal        "#[fg=#282a36,bg=#50fa7b,bold] TMUX #[fg=#50fa7b,bg=#282a36]"
+                mode_normal        "#[fg=#282a36,bg=#50fa7b,bold] Z #[fg=#50fa7b,bg=#282a36]"
                 mode_tmux          "#[fg=#282a36,bg=#bd93f9,bold] PRE #[fg=#bd93f9,bg=#44475a]"
                 mode_locked        "#[fg=#282a36,bg=#ff5555,bold] LOCK #[fg=#ff5555,bg=#282a36]"
                 mode_pane          "#[fg=#282a36,bg=#8be9fd,bold] PANE #[fg=#8be9fd,bg=#282a36]"
