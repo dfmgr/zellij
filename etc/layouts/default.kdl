@@ -1,0 +1,121 @@
+// Zellij layout with zjstatus - Dracula Powerline theme (mimics tmux)
+// Status bar at bottom matching tmux config
+
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="file:$HOME/.config/zellij/plugins/zjstatus.wasm" {
+                // Format layout - mimics tmux status bar
+                // Left: mode (prefix_highlight), session, user@host, git status
+                // Center: tabs (windows)
+                // Right: weather, uptime, datetime
+                format_left   "{mode}#[fg=#44475a,bg=#282a36]#[fg=#f8f8f2,bg=#44475a] {session} #[fg=#44475a,bg=#282a36]#[fg=#8be9fd,bg=#282a36] {command_user}@{command_host} #[fg=#f1fa8c]{command_git}"
+                format_center "{tabs}"
+                format_right  "{command_weather}#[fg=#6272a4,bg=#282a36]│ #[fg=#ffb86c]UP:{command_uptime} #[fg=#6272a4]│ #[fg=#8be9fd]{datetime}"
+                format_space  "#[bg=#282a36] "
+                format_hide_on_overlength "true"
+                format_precedence "crl"
+
+                // Border - disabled like tmux
+                border_enabled  "false"
+                border_char     "─"
+                border_format   "#[fg=#6272a4]{char}"
+                border_position "top"
+
+                // Hide frames for single pane (cleaner look)
+                hide_frame_for_single_pane "false"
+
+                // ═══════════════════════════════════════════════════════════
+                // MODE INDICATOR - Powerline style like tmux prefix_highlight
+                // ═══════════════════════════════════════════════════════════
+                // Normal = TMUX (green like tmux empty prompt)
+                // Tmux mode = PRE (purple, prefix active)
+                // Scroll = COPY (yellow like tmux copy mode)
+                // Locked = LOCK (red)
+                mode_normal        "#[fg=#282a36,bg=#50fa7b,bold] TMUX #[fg=#50fa7b,bg=#282a36]"
+                mode_tmux          "#[fg=#282a36,bg=#bd93f9,bold] PRE #[fg=#bd93f9,bg=#44475a]"
+                mode_locked        "#[fg=#282a36,bg=#ff5555,bold] LOCK #[fg=#ff5555,bg=#282a36]"
+                mode_pane          "#[fg=#282a36,bg=#8be9fd,bold] PANE #[fg=#8be9fd,bg=#282a36]"
+                mode_tab           "#[fg=#282a36,bg=#ffb86c,bold] TAB #[fg=#ffb86c,bg=#282a36]"
+                mode_scroll        "#[fg=#282a36,bg=#f1fa8c,bold] COPY #[fg=#f1fa8c,bg=#282a36]"
+                mode_search        "#[fg=#282a36,bg=#f1fa8c,bold] SRCH #[fg=#f1fa8c,bg=#282a36]"
+                mode_enter_search  "#[fg=#282a36,bg=#f1fa8c,bold] SRCH #[fg=#f1fa8c,bg=#282a36]"
+                mode_rename_tab    "#[fg=#282a36,bg=#ffb86c,bold] RENT #[fg=#ffb86c,bg=#282a36]"
+                mode_rename_pane   "#[fg=#282a36,bg=#8be9fd,bold] RENP #[fg=#8be9fd,bg=#282a36]"
+                mode_resize        "#[fg=#282a36,bg=#ff79c6,bold] RESZ #[fg=#ff79c6,bg=#282a36]"
+                mode_move          "#[fg=#282a36,bg=#ff79c6,bold] MOVE #[fg=#ff79c6,bg=#282a36]"
+                mode_session       "#[fg=#282a36,bg=#bd93f9,bold] SESS #[fg=#bd93f9,bg=#282a36]"
+                mode_default_to_mode "tmux"
+
+                // ═══════════════════════════════════════════════════════════
+                // TAB FORMAT - Powerline style matching tmux window-status
+                // ═══════════════════════════════════════════════════════════
+                // Inactive: comment bg (#6272a4) for index, selection bg (#44475a) for name
+                // Active: purple bg (#bd93f9) for index, current line bg (#44475a) bold for name
+                tab_normal              "#[fg=#282a36,bg=#6272a4] {index} #[fg=#f8f8f2,bg=#44475a] {name}{floating_indicator} #[fg=#44475a,bg=#282a36]"
+                tab_normal_fullscreen   "#[fg=#282a36,bg=#6272a4] {index} #[fg=#f8f8f2,bg=#44475a] {name}{fullscreen_indicator} #[fg=#44475a,bg=#282a36]"
+                tab_normal_sync         "#[fg=#282a36,bg=#ff5555] {index} #[fg=#f8f8f2,bg=#44475a] {name}{sync_indicator} #[fg=#44475a,bg=#282a36]"
+                tab_active              "#[fg=#282a36,bg=#bd93f9,bold] {index} #[fg=#f8f8f2,bg=#44475a,bold] {name}{floating_indicator} #[fg=#44475a,bg=#282a36]"
+                tab_active_fullscreen   "#[fg=#282a36,bg=#bd93f9,bold] {index} #[fg=#f8f8f2,bg=#44475a,bold] {name}{fullscreen_indicator} #[fg=#44475a,bg=#282a36]"
+                tab_active_sync         "#[fg=#282a36,bg=#ff5555,bold] {index} #[fg=#f8f8f2,bg=#44475a,bold] {name}{sync_indicator} #[fg=#44475a,bg=#282a36]"
+                tab_separator           ""
+                tab_rename              "#[fg=#282a36,bg=#ffb86c] {index} #[fg=#f8f8f2,bg=#44475a] {name} #[fg=#44475a,bg=#282a36]"
+
+                // Tab indicators (matching tmux activity style)
+                tab_sync_indicator       " "
+                tab_fullscreen_indicator " "
+                tab_floating_indicator   " "
+
+                // Tab display settings
+                tab_display_count         "9"
+                tab_truncate_start_format "#[fg=#6272a4,bg=#282a36] +{count} ← "
+                tab_truncate_end_format   "#[fg=#6272a4,bg=#282a36] → +{count} "
+
+                // ═══════════════════════════════════════════════════════════
+                // COMMAND WIDGETS - Custom shell commands
+                // ═══════════════════════════════════════════════════════════
+
+                // Username (like tmux $USER)
+                command_user_command     "whoami"
+                command_user_format      "{stdout}"
+                command_user_interval    "0"
+                command_user_rendermode  "static"
+
+                // Hostname (like tmux #H)
+                command_host_command     "hostname -s"
+                command_host_format      "{stdout}"
+                command_host_interval    "0"
+                command_host_rendermode  "static"
+
+                // Git branch (like tmux simple_git_status)
+                command_git_command      "git rev-parse --abbrev-ref HEAD 2>/dev/null || echo ''"
+                command_git_format       " {stdout}"
+                command_git_interval     "5"
+                command_git_rendermode   "static"
+
+                // Weather (like tmux-statusbar weather)
+                command_weather_command  "curl -s 'wttr.in/?format=%c%t' 2>/dev/null | tr -d '\\n' | head -c 15 || echo ''"
+                command_weather_format   "#[fg=#ff79c6]{stdout} "
+                command_weather_interval "600"
+                command_weather_rendermode "static"
+
+                // Uptime (like tmux uptime)
+                command_uptime_command   "uptime | sed 's/.*up //' | sed 's/,.*//' | sed 's/^ *//' | tr -d '\\n' | head -c 10"
+                command_uptime_format    "{stdout}"
+                command_uptime_interval  "60"
+                command_uptime_rendermode "static"
+
+                // ═══════════════════════════════════════════════════════════
+                // DATETIME - Like tmux %m/%d %H:%M
+                // ═══════════════════════════════════════════════════════════
+                datetime          "#[fg=#f8f8f2]{format}"
+                datetime_format   "%m/%d %H:%M"
+                datetime_timezone "America/New_York"
+            }
+        }
+    }
+
+    // Default tab - inherit from template
+    tab name="main" focus=true
+}

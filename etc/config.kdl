@@ -12,8 +12,8 @@ theme "dracula"
 // Default shell
 default_shell "bash"
 
-// Default layout (use built-in compact-bar)
-default_layout "compact"
+// Default layout (uses zjstatus - tmux-like powerline status bar)
+default_layout "default"
 
 // Default mode (locked requires prefix to interact, normal doesn't)
 default_mode "normal"
@@ -125,6 +125,8 @@ plugins {
     configuration location="zellij:configuration"
     plugin-manager location="zellij:plugin-manager"
     about location="zellij:about"
+    // zjstatus - custom status bar plugin (tmux-like powerline)
+    zjstatus location="file:$HOME/.config/zellij/plugins/zjstatus.wasm"
 }
 
 // =============================================================================

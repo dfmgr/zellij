@@ -208,9 +208,24 @@ __run_prepost_install() {
 __run_post_install() {
   local getRunStatus=0
   # dfmgr_run_post handles: etc/, bin/, completions/, applications/
+  # Download zjstatus plugin for tmux-like status bar
+  __download_zjstatus || getRunStatus=$((getRunStatus + 1))
   # Setup plugin permissions (append, don't overwrite)
   __setup_plugin_permissions
   return $getRunStatus
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Download zjstatus plugin from GitHub releases
+__download_zjstatus() {
+  local ZJSTATUS_URL="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm"
+  local ZJSTATUS_FILE="$PLUGIN_DIR/zjstatus.wasm"
+  # Create plugin directory if needed
+  mkdir -p "$PLUGIN_DIR" 2>/dev/null || return 1
+  # Download zjstatus if not present or force update
+  if [ ! -f "$ZJSTATUS_FILE" ] || [ "${FORCE_UPDATE:-}" = "true" ]; then
+    curl -q -LSsf "$ZJSTATUS_URL" -o "$ZJSTATUS_FILE" 2>/dev/null || return 1
+  fi
+  [ -f "$ZJSTATUS_FILE" ] && return 0 || return 1
 }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup plugin permissions - appends if not present, never overwrites
