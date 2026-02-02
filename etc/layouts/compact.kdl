@@ -1,0 +1,45 @@
+// Compact layout with zjstatus (minimal, single line status bar)
+// Uses PRE instead of TMUX for prefix mode indicator
+
+layout {
+    default_tab_template {
+        children
+        pane size=1 borderless=true {
+            plugin location="file:~/.config/zellij/plugins/zjstatus.wasm" {
+                // Compact format: mode session | tabs | time
+                format_left   "{mode}#[fg=#bd93f9,bold]{session}"
+                format_center "{tabs}"
+                format_right  "{datetime}"
+                format_space  "#[bg=#282a36]"
+
+                border_enabled  "false"
+                hide_frame_for_single_pane "true"
+
+                // Mode indicators - compact style
+                mode_normal        "#[bg=#50fa7b,fg=#282a36] N "
+                mode_tmux          "#[bg=#ff79c6,fg=#282a36] PRE "
+                mode_locked        "#[bg=#ff5555,fg=#282a36] L "
+                mode_pane          "#[bg=#8be9fd,fg=#282a36] P "
+                mode_tab           "#[bg=#ffb86c,fg=#282a36] T "
+                mode_scroll        "#[bg=#bd93f9,fg=#282a36] S "
+                mode_search        "#[bg=#f1fa8c,fg=#282a36] / "
+                mode_enter_search  "#[bg=#f1fa8c,fg=#282a36] / "
+                mode_rename_tab    "#[bg=#ffb86c,fg=#282a36] R "
+                mode_rename_pane   "#[bg=#8be9fd,fg=#282a36] R "
+                mode_resize        "#[bg=#ff79c6,fg=#282a36] Z "
+                mode_move          "#[bg=#8be9fd,fg=#282a36] M "
+                mode_session       "#[bg=#bd93f9,fg=#282a36] S "
+
+                // Tab formatting - compact
+                tab_normal   "#[fg=#6272a4] {name} "
+                tab_active   "#[fg=#f8f8f2,bold] {name} "
+                tab_separator "#[fg=#44475a]|"
+
+                // Datetime - compact
+                datetime          "#[fg=#6272a4]{format}"
+                datetime_format   "%H:%M"
+                datetime_timezone "America/New_York"
+            }
+        }
+    }
+}

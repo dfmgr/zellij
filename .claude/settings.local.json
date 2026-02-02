@@ -4,7 +4,10 @@
       "WebFetch(domain:zellij.dev)",
       "Bash(openssl req:*)",
       "Bash(openssl x509:*)",
-      "Bash(zellij setup:*)"
+      "Bash(zellij setup:*)",
+      "Bash(zellij --help:*)",
+      "Bash(zellij options:*)",
+      "WebFetch(domain:jcd.pub)"
     ]
   }
 }

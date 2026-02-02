@@ -201,6 +201,8 @@ __run_prepost_install() {
   if ! __cmd_exists zellij; then
     __install_zellij_binary || getRunStatus=$((getRunStatus + 1))
   fi
+  # Install zjstatus plugin
+  __install_zjstatus_plugin || getRunStatus=$((getRunStatus + 1))
   return $getRunStatus
 }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -209,6 +211,23 @@ __run_post_install() {
   local getRunStatus=0
   # dfmgr_run_post handles: etc/, bin/, completions/, applications/
   return $getRunStatus
+}
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Install zjstatus plugin from GitHub releases
+__install_zjstatus_plugin() {
+  local PLUGIN_DIR="$HOME/.config/zellij/plugins"
+  local PLUGIN_FILE="$PLUGIN_DIR/zjstatus.wasm"
+  local ZJSTATUS_REPO="dj95/zjstatus"
+  local ZJSTATUS_URL=""
+  # Skip if already installed
+  [ -f "$PLUGIN_FILE" ] && return 0
+  # Get latest release URL
+  ZJSTATUS_URL=$(curl -q -LSsf "https://api.github.com/repos/${ZJSTATUS_REPO}/releases/latest" 2>/dev/null | grep '"browser_download_url":.*zjstatus.wasm"' | sed -E 's/.*"([^"]+)".*/\1/')
+  [ -z "$ZJSTATUS_URL" ] && return 1
+  # Create plugin directory and download
+  mkdir -p "$PLUGIN_DIR" || return 1
+  curl -q -LSsf "$ZJSTATUS_URL" -o "$PLUGIN_FILE" 2>/dev/null || return 1
+  [ -f "$PLUGIN_FILE" ] && return 0 || return 1
 }
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Custom plugin function

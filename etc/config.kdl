@@ -12,11 +12,17 @@ theme "dracula"
 // Default shell
 default_shell "bash"
 
-// Default layout
-default_layout "compact"
+// Default layout (uses zjstatus for custom status bar)
+default_layout "default"
 
 // Default mode (locked requires prefix to interact, normal doesn't)
 default_mode "normal"
+
+// Session management
+// When session_name is set and attach_to_session is true, zellij will
+// attach to existing session instead of creating new one
+// Use shell integration (source zellij.sh) for directory-based session names
+attach_to_session true
 
 // Enable mouse support (equivalent to tmux mouse off by default - toggle with prefix+m)
 mouse_mode false
