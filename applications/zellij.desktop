@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Zellij
+GenericName=Terminal Multiplexer
+Comment=A terminal workspace with batteries included
+Exec=zellij
+Icon=utilities-terminal
+Terminal=true
+Type=Application
+Categories=System;TerminalEmulator;Utility;
+Keywords=terminal;multiplexer;tmux;screen;workspace;pane;tab;
+StartupNotify=true
+StartupWMClass=zellij

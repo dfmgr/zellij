@@ -1,0 +1,144 @@
+// Dracula Theme for Zellij
+// https://draculatheme.com/
+// Colors matched from tmux configuration
+
+themes {
+    dracula {
+        // Core palette (legacy format for compatibility)
+        fg "#f8f8f2"
+        bg "#282a36"
+        black "#21222c"
+        red "#ff5555"
+        green "#50fa7b"
+        yellow "#f1fa8c"
+        blue "#bd93f9"
+        magenta "#ff79c6"
+        cyan "#8be9fd"
+        white "#f8f8f2"
+        orange "#ffb86c"
+
+        // Component-specific colors (new format)
+        text_unselected {
+            base 248 248 242       // fg
+            background 40 42 54    // bg
+            emphasis_0 189 147 249 // purple
+            emphasis_1 255 121 198 // pink
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        text_selected {
+            base 40 42 54          // bg
+            background 189 147 249 // purple
+            emphasis_0 248 248 242 // fg
+            emphasis_1 255 121 198 // pink
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        ribbon_unselected {
+            base 248 248 242       // fg
+            background 68 71 90    // selection
+            emphasis_0 189 147 249 // purple
+            emphasis_1 255 184 108 // orange
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 241 250 140 // yellow
+        }
+        ribbon_selected {
+            base 40 42 54          // bg
+            background 189 147 249 // purple
+            emphasis_0 248 248 242 // fg
+            emphasis_1 255 121 198 // pink
+            emphasis_2 80 250 123  // green
+            emphasis_3 241 250 140 // yellow
+        }
+        table_title {
+            base 189 147 249       // purple
+            background 40 42 54    // bg
+            emphasis_0 248 248 242 // fg
+            emphasis_1 255 121 198 // pink
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        table_cell_unselected {
+            base 248 248 242       // fg
+            background 40 42 54    // bg
+            emphasis_0 189 147 249 // purple
+            emphasis_1 255 184 108 // orange
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 98 114 164  // comment
+        }
+        table_cell_selected {
+            base 40 42 54          // bg
+            background 68 71 90    // selection
+            emphasis_0 248 248 242 // fg
+            emphasis_1 189 147 249 // purple
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        list_unselected {
+            base 248 248 242       // fg
+            background 40 42 54    // bg
+            emphasis_0 189 147 249 // purple
+            emphasis_1 255 184 108 // orange
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        list_selected {
+            base 40 42 54          // bg
+            background 189 147 249 // purple
+            emphasis_0 248 248 242 // fg
+            emphasis_1 255 121 198 // pink
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        frame_unselected {
+            base 98 114 164        // comment
+            background 40 42 54    // bg
+            emphasis_0 189 147 249 // purple
+            emphasis_1 255 184 108 // orange
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        frame_selected {
+            base 189 147 249       // purple
+            background 40 42 54    // bg
+            emphasis_0 248 248 242 // fg
+            emphasis_1 255 121 198 // pink
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        frame_highlight {
+            base 255 121 198       // pink
+            background 40 42 54    // bg
+            emphasis_0 248 248 242 // fg
+            emphasis_1 189 147 249 // purple
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 80 250 123  // green
+        }
+        exit_code_success {
+            base 80 250 123        // green
+            background 40 42 54    // bg
+            emphasis_0 248 248 242 // fg
+            emphasis_1 189 147 249 // purple
+            emphasis_2 139 233 253 // cyan
+            emphasis_3 241 250 140 // yellow
+        }
+        exit_code_error {
+            base 255 85 85         // red
+            background 40 42 54    // bg
+            emphasis_0 248 248 242 // fg
+            emphasis_1 189 147 249 // purple
+            emphasis_2 255 184 108 // orange
+            emphasis_3 241 250 140 // yellow
+        }
+        multiplayer_user_colors {
+            player_1 255 121 198   // pink
+            player_2 139 233 253   // cyan
+            player_3 80 250 123    // green
+            player_4 241 250 140   // yellow
+            player_5 255 184 108   // orange
+            player_6 189 147 249   // purple
+            player_7 255 85 85     // red
+            player_8 98 114 164    // comment
+        }
+    }
+}

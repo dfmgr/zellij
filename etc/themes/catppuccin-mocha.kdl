@@ -1,0 +1,83 @@
+// Catppuccin Mocha Theme for Zellij
+// https://github.com/catppuccin/catppuccin
+
+themes {
+    catppuccin-mocha {
+        fg "#cdd6f4"
+        bg "#1e1e2e"
+        black "#181825"
+        red "#f38ba8"
+        green "#a6e3a1"
+        yellow "#f9e2af"
+        blue "#89b4fa"
+        magenta "#f5c2e7"
+        cyan "#94e2d5"
+        white "#cdd6f4"
+        orange "#fab387"
+
+        text_unselected {
+            base 205 214 244       // text
+            background 30 30 46    // base
+            emphasis_0 137 180 250 // blue
+            emphasis_1 245 194 231 // pink
+            emphasis_2 148 226 213 // teal
+            emphasis_3 166 227 161 // green
+        }
+        text_selected {
+            base 30 30 46          // base
+            background 137 180 250 // blue
+            emphasis_0 205 214 244 // text
+            emphasis_1 245 194 231 // pink
+            emphasis_2 148 226 213 // teal
+            emphasis_3 166 227 161 // green
+        }
+        ribbon_unselected {
+            base 205 214 244       // text
+            background 69 71 90    // surface1
+            emphasis_0 137 180 250 // blue
+            emphasis_1 250 179 135 // peach
+            emphasis_2 148 226 213 // teal
+            emphasis_3 249 226 175 // yellow
+        }
+        ribbon_selected {
+            base 30 30 46          // base
+            background 137 180 250 // blue
+            emphasis_0 205 214 244 // text
+            emphasis_1 245 194 231 // pink
+            emphasis_2 166 227 161 // green
+            emphasis_3 249 226 175 // yellow
+        }
+        frame_unselected {
+            base 108 112 134       // overlay0
+            background 30 30 46    // base
+            emphasis_0 137 180 250 // blue
+            emphasis_1 250 179 135 // peach
+            emphasis_2 148 226 213 // teal
+            emphasis_3 166 227 161 // green
+        }
+        frame_selected {
+            base 137 180 250       // blue
+            background 30 30 46    // base
+            emphasis_0 205 214 244 // text
+            emphasis_1 245 194 231 // pink
+            emphasis_2 148 226 213 // teal
+            emphasis_3 166 227 161 // green
+        }
+        exit_code_success {
+            base 166 227 161       // green
+            background 30 30 46    // base
+            emphasis_0 205 214 244 // text
+            emphasis_1 137 180 250 // blue
+            emphasis_2 148 226 213 // teal
+            emphasis_3 249 226 175 // yellow
+        }
+        exit_code_error {
+            base 243 139 168       // red
+            background 30 30 46    // base
+            emphasis_0 205 214 244 // text
+            emphasis_1 137 180 250 // blue
+            emphasis_2 250 179 135 // peach
+            emphasis_3 249 226 175 // yellow
+        }
+    }
+}

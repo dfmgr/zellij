@@ -1,0 +1,83 @@
+// Solarized Dark Theme for Zellij
+// https://ethanschoonover.com/solarized/
+
+themes {
+    solarized-dark {
+        fg "#839496"
+        bg "#002b36"
+        black "#073642"
+        red "#dc322f"
+        green "#859900"
+        yellow "#b58900"
+        blue "#268bd2"
+        magenta "#d33682"
+        cyan "#2aa198"
+        white "#eee8d5"
+        orange "#cb4b16"
+
+        text_unselected {
+            base 131 148 150       // base0
+            background 0 43 54     // base03
+            emphasis_0 38 139 210  // blue
+            emphasis_1 211 54 130  // magenta
+            emphasis_2 42 161 152  // cyan
+            emphasis_3 133 153 0   // green
+        }
+        text_selected {
+            base 0 43 54           // base03
+            background 38 139 210  // blue
+            emphasis_0 131 148 150 // base0
+            emphasis_1 211 54 130  // magenta
+            emphasis_2 42 161 152  // cyan
+            emphasis_3 133 153 0   // green
+        }
+        ribbon_unselected {
+            base 131 148 150       // base0
+            background 7 54 66     // base02
+            emphasis_0 38 139 210  // blue
+            emphasis_1 203 75 22   // orange
+            emphasis_2 42 161 152  // cyan
+            emphasis_3 181 137 0   // yellow
+        }
+        ribbon_selected {
+            base 0 43 54           // base03
+            background 38 139 210  // blue
+            emphasis_0 131 148 150 // base0
+            emphasis_1 211 54 130  // magenta
+            emphasis_2 133 153 0   // green
+            emphasis_3 181 137 0   // yellow
+        }
+        frame_unselected {
+            base 88 110 117        // base01
+            background 0 43 54     // base03
+            emphasis_0 38 139 210  // blue
+            emphasis_1 203 75 22   // orange
+            emphasis_2 42 161 152  // cyan
+            emphasis_3 133 153 0   // green
+        }
+        frame_selected {
+            base 38 139 210        // blue
+            background 0 43 54     // base03
+            emphasis_0 131 148 150 // base0
+            emphasis_1 211 54 130  // magenta
+            emphasis_2 42 161 152  // cyan
+            emphasis_3 133 153 0   // green
+        }
+        exit_code_success {
+            base 133 153 0         // green
+            background 0 43 54     // base03
+            emphasis_0 131 148 150 // base0
+            emphasis_1 38 139 210  // blue
+            emphasis_2 42 161 152  // cyan
+            emphasis_3 181 137 0   // yellow
+        }
+        exit_code_error {
+            base 220 50 47         // red
+            background 0 43 54     // base03
+            emphasis_0 131 148 150 // base0
+            emphasis_1 38 139 210  // blue
+            emphasis_2 203 75 22   // orange
+            emphasis_3 181 137 0   // yellow
+        }
+    }
+}

@@ -1,0 +1,83 @@
+// Rosé Pine Theme for Zellij
+// https://rosepinetheme.com/
+
+themes {
+    rose-pine {
+        fg "#e0def4"
+        bg "#191724"
+        black "#26233a"
+        red "#eb6f92"
+        green "#9ccfd8"
+        yellow "#f6c177"
+        blue "#31748f"
+        magenta "#c4a7e7"
+        cyan "#ebbcba"
+        white "#e0def4"
+        orange "#f6c177"
+
+        text_unselected {
+            base 224 222 244       // text
+            background 25 23 36    // base
+            emphasis_0 49 116 143  // pine
+            emphasis_1 196 167 231 // iris
+            emphasis_2 235 188 186 // rose
+            emphasis_3 156 207 216 // foam
+        }
+        text_selected {
+            base 25 23 36          // base
+            background 49 116 143  // pine
+            emphasis_0 224 222 244 // text
+            emphasis_1 196 167 231 // iris
+            emphasis_2 235 188 186 // rose
+            emphasis_3 156 207 216 // foam
+        }
+        ribbon_unselected {
+            base 224 222 244       // text
+            background 38 35 58    // surface
+            emphasis_0 49 116 143  // pine
+            emphasis_1 246 193 119 // gold
+            emphasis_2 235 188 186 // rose
+            emphasis_3 246 193 119 // gold
+        }
+        ribbon_selected {
+            base 25 23 36          // base
+            background 49 116 143  // pine
+            emphasis_0 224 222 244 // text
+            emphasis_1 196 167 231 // iris
+            emphasis_2 156 207 216 // foam
+            emphasis_3 246 193 119 // gold
+        }
+        frame_unselected {
+            base 110 106 134       // muted
+            background 25 23 36    // base
+            emphasis_0 49 116 143  // pine
+            emphasis_1 246 193 119 // gold
+            emphasis_2 235 188 186 // rose
+            emphasis_3 156 207 216 // foam
+        }
+        frame_selected {
+            base 49 116 143        // pine
+            background 25 23 36    // base
+            emphasis_0 224 222 244 // text
+            emphasis_1 196 167 231 // iris
+            emphasis_2 235 188 186 // rose
+            emphasis_3 156 207 216 // foam
+        }
+        exit_code_success {
+            base 156 207 216       // foam
+            background 25 23 36    // base
+            emphasis_0 224 222 244 // text
+            emphasis_1 49 116 143  // pine
+            emphasis_2 235 188 186 // rose
+            emphasis_3 246 193 119 // gold
+        }
+        exit_code_error {
+            base 235 111 146       // love
+            background 25 23 36    // base
+            emphasis_0 224 222 244 // text
+            emphasis_1 49 116 143  // pine
+            emphasis_2 246 193 119 // gold
+            emphasis_3 246 193 119 // gold
+        }
+    }
+}

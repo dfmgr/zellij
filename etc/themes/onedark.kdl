@@ -1,0 +1,83 @@
+// One Dark Theme for Zellij
+// https://github.com/atom/one-dark-syntax
+
+themes {
+    onedark {
+        fg "#abb2bf"
+        bg "#282c34"
+        black "#1e2127"
+        red "#e06c75"
+        green "#98c379"
+        yellow "#e5c07b"
+        blue "#61afef"
+        magenta "#c678dd"
+        cyan "#56b6c2"
+        white "#abb2bf"
+        orange "#d19a66"
+
+        text_unselected {
+            base 171 178 191       // fg
+            background 40 44 52    // bg
+            emphasis_0 97 175 239  // blue
+            emphasis_1 198 120 221 // magenta
+            emphasis_2 86 182 194  // cyan
+            emphasis_3 152 195 121 // green
+        }
+        text_selected {
+            base 40 44 52          // bg
+            background 97 175 239  // blue
+            emphasis_0 171 178 191 // fg
+            emphasis_1 198 120 221 // magenta
+            emphasis_2 86 182 194  // cyan
+            emphasis_3 152 195 121 // green
+        }
+        ribbon_unselected {
+            base 171 178 191       // fg
+            background 62 68 81    // gutter
+            emphasis_0 97 175 239  // blue
+            emphasis_1 209 154 102 // orange
+            emphasis_2 86 182 194  // cyan
+            emphasis_3 229 192 123 // yellow
+        }
+        ribbon_selected {
+            base 40 44 52          // bg
+            background 97 175 239  // blue
+            emphasis_0 171 178 191 // fg
+            emphasis_1 198 120 221 // magenta
+            emphasis_2 152 195 121 // green
+            emphasis_3 229 192 123 // yellow
+        }
+        frame_unselected {
+            base 92 99 112         // comment
+            background 40 44 52    // bg
+            emphasis_0 97 175 239  // blue
+            emphasis_1 209 154 102 // orange
+            emphasis_2 86 182 194  // cyan
+            emphasis_3 152 195 121 // green
+        }
+        frame_selected {
+            base 97 175 239        // blue
+            background 40 44 52    // bg
+            emphasis_0 171 178 191 // fg
+            emphasis_1 198 120 221 // magenta
+            emphasis_2 86 182 194  // cyan
+            emphasis_3 152 195 121 // green
+        }
+        exit_code_success {
+            base 152 195 121       // green
+            background 40 44 52    // bg
+            emphasis_0 171 178 191 // fg
+            emphasis_1 97 175 239  // blue
+            emphasis_2 86 182 194  // cyan
+            emphasis_3 229 192 123 // yellow
+        }
+        exit_code_error {
+            base 224 108 117       // red
+            background 40 44 52    // bg
+            emphasis_0 171 178 191 // fg
+            emphasis_1 97 175 239  // blue
+            emphasis_2 209 154 102 // orange
+            emphasis_3 229 192 123 // yellow
+        }
+    }
+}

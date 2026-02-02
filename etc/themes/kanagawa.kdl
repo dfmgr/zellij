@@ -1,0 +1,83 @@
+// Kanagawa Theme for Zellij
+// https://github.com/rebelot/kanagawa.nvim
+
+themes {
+    kanagawa {
+        fg "#dcd7ba"
+        bg "#1f1f28"
+        black "#16161d"
+        red "#c34043"
+        green "#76946a"
+        yellow "#c0a36e"
+        blue "#7e9cd8"
+        magenta "#957fb8"
+        cyan "#6a9589"
+        white "#dcd7ba"
+        orange "#ffa066"
+
+        text_unselected {
+            base 220 215 186       // fujiWhite
+            background 31 31 40    // sumiInk1
+            emphasis_0 126 156 216 // crystalBlue
+            emphasis_1 149 127 184 // oniViolet
+            emphasis_2 106 149 137 // waveAqua2
+            emphasis_3 118 148 106 // springGreen
+        }
+        text_selected {
+            base 31 31 40          // sumiInk1
+            background 126 156 216 // crystalBlue
+            emphasis_0 220 215 186 // fujiWhite
+            emphasis_1 149 127 184 // oniViolet
+            emphasis_2 106 149 137 // waveAqua2
+            emphasis_3 118 148 106 // springGreen
+        }
+        ribbon_unselected {
+            base 220 215 186       // fujiWhite
+            background 54 54 70    // sumiInk3
+            emphasis_0 126 156 216 // crystalBlue
+            emphasis_1 255 160 102 // surimiOrange
+            emphasis_2 106 149 137 // waveAqua2
+            emphasis_3 192 163 110 // boatYellow2
+        }
+        ribbon_selected {
+            base 31 31 40          // sumiInk1
+            background 126 156 216 // crystalBlue
+            emphasis_0 220 215 186 // fujiWhite
+            emphasis_1 149 127 184 // oniViolet
+            emphasis_2 118 148 106 // springGreen
+            emphasis_3 192 163 110 // boatYellow2
+        }
+        frame_unselected {
+            base 114 102 95        // fujiGray
+            background 31 31 40    // sumiInk1
+            emphasis_0 126 156 216 // crystalBlue
+            emphasis_1 255 160 102 // surimiOrange
+            emphasis_2 106 149 137 // waveAqua2
+            emphasis_3 118 148 106 // springGreen
+        }
+        frame_selected {
+            base 126 156 216       // crystalBlue
+            background 31 31 40    // sumiInk1
+            emphasis_0 220 215 186 // fujiWhite
+            emphasis_1 149 127 184 // oniViolet
+            emphasis_2 106 149 137 // waveAqua2
+            emphasis_3 118 148 106 // springGreen
+        }
+        exit_code_success {
+            base 118 148 106       // springGreen
+            background 31 31 40    // sumiInk1
+            emphasis_0 220 215 186 // fujiWhite
+            emphasis_1 126 156 216 // crystalBlue
+            emphasis_2 106 149 137 // waveAqua2
+            emphasis_3 192 163 110 // boatYellow2
+        }
+        exit_code_error {
+            base 195 64 67         // autumnRed
+            background 31 31 40    // sumiInk1
+            emphasis_0 220 215 186 // fujiWhite
+            emphasis_1 126 156 216 // crystalBlue
+            emphasis_2 255 160 102 // surimiOrange
+            emphasis_3 192 163 110 // boatYellow2
+        }
+    }
+}

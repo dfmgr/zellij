@@ -1,0 +1,83 @@
+// Catppuccin Latte Theme for Zellij (Light)
+// https://github.com/catppuccin/catppuccin
+
+themes {
+    catppuccin-latte {
+        fg "#4c4f69"
+        bg "#eff1f5"
+        black "#5c5f77"
+        red "#d20f39"
+        green "#40a02b"
+        yellow "#df8e1d"
+        blue "#1e66f5"
+        magenta "#ea76cb"
+        cyan "#179299"
+        white "#acb0be"
+        orange "#fe640b"
+
+        text_unselected {
+            base 76 79 105         // text
+            background 239 241 245 // base
+            emphasis_0 30 102 245  // blue
+            emphasis_1 234 118 203 // pink
+            emphasis_2 23 146 153  // teal
+            emphasis_3 64 160 43   // green
+        }
+        text_selected {
+            base 239 241 245       // base
+            background 30 102 245  // blue
+            emphasis_0 76 79 105   // text
+            emphasis_1 234 118 203 // pink
+            emphasis_2 23 146 153  // teal
+            emphasis_3 64 160 43   // green
+        }
+        ribbon_unselected {
+            base 76 79 105         // text
+            background 188 192 204 // surface1
+            emphasis_0 30 102 245  // blue
+            emphasis_1 254 100 11  // peach
+            emphasis_2 23 146 153  // teal
+            emphasis_3 223 142 29  // yellow
+        }
+        ribbon_selected {
+            base 239 241 245       // base
+            background 30 102 245  // blue
+            emphasis_0 76 79 105   // text
+            emphasis_1 234 118 203 // pink
+            emphasis_2 64 160 43   // green
+            emphasis_3 223 142 29  // yellow
+        }
+        frame_unselected {
+            base 140 143 161       // overlay0
+            background 239 241 245 // base
+            emphasis_0 30 102 245  // blue
+            emphasis_1 254 100 11  // peach
+            emphasis_2 23 146 153  // teal
+            emphasis_3 64 160 43   // green
+        }
+        frame_selected {
+            base 30 102 245        // blue
+            background 239 241 245 // base
+            emphasis_0 76 79 105   // text
+            emphasis_1 234 118 203 // pink
+            emphasis_2 23 146 153  // teal
+            emphasis_3 64 160 43   // green
+        }
+        exit_code_success {
+            base 64 160 43         // green
+            background 239 241 245 // base
+            emphasis_0 76 79 105   // text
+            emphasis_1 30 102 245  // blue
+            emphasis_2 23 146 153  // teal
+            emphasis_3 223 142 29  // yellow
+        }
+        exit_code_error {
+            base 210 15 57         // red
+            background 239 241 245 // base
+            emphasis_0 76 79 105   // text
+            emphasis_1 30 102 245  // blue
+            emphasis_2 254 100 11  // peach
+            emphasis_3 223 142 29  // yellow
+        }
+    }
+}

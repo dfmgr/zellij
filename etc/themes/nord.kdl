@@ -1,0 +1,83 @@
+// Nord Theme for Zellij
+// https://www.nordtheme.com/
+
+themes {
+    nord {
+        fg "#d8dee9"
+        bg "#2e3440"
+        black "#3b4252"
+        red "#bf616a"
+        green "#a3be8c"
+        yellow "#ebcb8b"
+        blue "#81a1c1"
+        magenta "#b48ead"
+        cyan "#88c0d0"
+        white "#e5e9f0"
+        orange "#d08770"
+
+        text_unselected {
+            base 216 222 233       // snow storm 0
+            background 46 52 64    // polar night 0
+            emphasis_0 129 161 193 // frost 1
+            emphasis_1 180 142 173 // aurora purple
+            emphasis_2 136 192 208 // frost 2
+            emphasis_3 163 190 140 // aurora green
+        }
+        text_selected {
+            base 46 52 64          // polar night 0
+            background 129 161 193 // frost 1
+            emphasis_0 216 222 233 // snow storm 0
+            emphasis_1 180 142 173 // aurora purple
+            emphasis_2 136 192 208 // frost 2
+            emphasis_3 163 190 140 // aurora green
+        }
+        ribbon_unselected {
+            base 216 222 233       // snow storm 0
+            background 59 66 82    // polar night 1
+            emphasis_0 129 161 193 // frost 1
+            emphasis_1 208 135 112 // aurora orange
+            emphasis_2 136 192 208 // frost 2
+            emphasis_3 235 203 139 // aurora yellow
+        }
+        ribbon_selected {
+            base 46 52 64          // polar night 0
+            background 129 161 193 // frost 1
+            emphasis_0 216 222 233 // snow storm 0
+            emphasis_1 180 142 173 // aurora purple
+            emphasis_2 163 190 140 // aurora green
+            emphasis_3 235 203 139 // aurora yellow
+        }
+        frame_unselected {
+            base 76 86 106         // polar night 3
+            background 46 52 64    // polar night 0
+            emphasis_0 129 161 193 // frost 1
+            emphasis_1 208 135 112 // aurora orange
+            emphasis_2 136 192 208 // frost 2
+            emphasis_3 163 190 140 // aurora green
+        }
+        frame_selected {
+            base 129 161 193       // frost 1
+            background 46 52 64    // polar night 0
+            emphasis_0 216 222 233 // snow storm 0
+            emphasis_1 180 142 173 // aurora purple
+            emphasis_2 136 192 208 // frost 2
+            emphasis_3 163 190 140 // aurora green
+        }
+        exit_code_success {
+            base 163 190 140       // aurora green
+            background 46 52 64    // polar night 0
+            emphasis_0 216 222 233 // snow storm 0
+            emphasis_1 129 161 193 // frost 1
+            emphasis_2 136 192 208 // frost 2
+            emphasis_3 235 203 139 // aurora yellow
+        }
+        exit_code_error {
+            base 191 97 106        // aurora red
+            background 46 52 64    // polar night 0
+            emphasis_0 216 222 233 // snow storm 0
+            emphasis_1 129 161 193 // frost 1
+            emphasis_2 208 135 112 // aurora orange
+            emphasis_3 235 203 139 // aurora yellow
+        }
+    }
+}

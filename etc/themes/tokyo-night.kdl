@@ -1,0 +1,83 @@
+// Tokyo Night Theme for Zellij
+// https://github.com/enkia/tokyo-night-vscode-theme
+
+themes {
+    tokyo-night {
+        fg "#a9b1d6"
+        bg "#1a1b26"
+        black "#32344a"
+        red "#f7768e"
+        green "#9ece6a"
+        yellow "#e0af68"
+        blue "#7aa2f7"
+        magenta "#bb9af7"
+        cyan "#7dcfff"
+        white "#a9b1d6"
+        orange "#ff9e64"
+
+        text_unselected {
+            base 169 177 214       // fg
+            background 26 27 38    // bg
+            emphasis_0 122 162 247 // blue
+            emphasis_1 187 154 247 // purple
+            emphasis_2 125 207 255 // cyan
+            emphasis_3 158 206 106 // green
+        }
+        text_selected {
+            base 26 27 38          // bg
+            background 122 162 247 // blue
+            emphasis_0 169 177 214 // fg
+            emphasis_1 187 154 247 // purple
+            emphasis_2 125 207 255 // cyan
+            emphasis_3 158 206 106 // green
+        }
+        ribbon_unselected {
+            base 169 177 214       // fg
+            background 50 52 74    // bg_highlight
+            emphasis_0 122 162 247 // blue
+            emphasis_1 255 158 100 // orange
+            emphasis_2 125 207 255 // cyan
+            emphasis_3 224 175 104 // yellow
+        }
+        ribbon_selected {
+            base 26 27 38          // bg
+            background 122 162 247 // blue
+            emphasis_0 169 177 214 // fg
+            emphasis_1 187 154 247 // purple
+            emphasis_2 158 206 106 // green
+            emphasis_3 224 175 104 // yellow
+        }
+        frame_unselected {
+            base 86 95 137         // comment
+            background 26 27 38    // bg
+            emphasis_0 122 162 247 // blue
+            emphasis_1 255 158 100 // orange
+            emphasis_2 125 207 255 // cyan
+            emphasis_3 158 206 106 // green
+        }
+        frame_selected {
+            base 122 162 247       // blue
+            background 26 27 38    // bg
+            emphasis_0 169 177 214 // fg
+            emphasis_1 187 154 247 // purple
+            emphasis_2 125 207 255 // cyan
+            emphasis_3 158 206 106 // green
+        }
+        exit_code_success {
+            base 158 206 106       // green
+            background 26 27 38    // bg
+            emphasis_0 169 177 214 // fg
+            emphasis_1 122 162 247 // blue
+            emphasis_2 125 207 255 // cyan
+            emphasis_3 224 175 104 // yellow
+        }
+        exit_code_error {
+            base 247 118 142       // red
+            background 26 27 38    // bg
+            emphasis_0 169 177 214 // fg
+            emphasis_1 122 162 247 // blue
+            emphasis_2 255 158 100 // orange
+            emphasis_3 224 175 104 // yellow
+        }
+    }
+}

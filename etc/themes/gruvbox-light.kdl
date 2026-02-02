@@ -1,0 +1,83 @@
+// Gruvbox Light Theme for Zellij
+// https://github.com/morhetz/gruvbox
+
+themes {
+    gruvbox-light {
+        fg "#3c3836"
+        bg "#fbf1c7"
+        black "#ebdbb2"
+        red "#cc241d"
+        green "#98971a"
+        yellow "#d79921"
+        blue "#458588"
+        magenta "#b16286"
+        cyan "#689d6a"
+        white "#7c6f64"
+        orange "#d65d0e"
+
+        text_unselected {
+            base 60 56 54          // fg
+            background 251 241 199 // bg
+            emphasis_0 69 133 136  // blue
+            emphasis_1 177 98 134  // purple
+            emphasis_2 104 157 106 // aqua
+            emphasis_3 152 151 26  // green
+        }
+        text_selected {
+            base 251 241 199       // bg
+            background 69 133 136  // blue
+            emphasis_0 60 56 54    // fg
+            emphasis_1 177 98 134  // purple
+            emphasis_2 104 157 106 // aqua
+            emphasis_3 152 151 26  // green
+        }
+        ribbon_unselected {
+            base 60 56 54          // fg
+            background 213 196 161 // bg2
+            emphasis_0 69 133 136  // blue
+            emphasis_1 214 93 14   // orange
+            emphasis_2 104 157 106 // aqua
+            emphasis_3 215 153 33  // yellow
+        }
+        ribbon_selected {
+            base 251 241 199       // bg
+            background 69 133 136  // blue
+            emphasis_0 60 56 54    // fg
+            emphasis_1 177 98 134  // purple
+            emphasis_2 152 151 26  // green
+            emphasis_3 215 153 33  // yellow
+        }
+        frame_unselected {
+            base 124 111 100       // gray
+            background 251 241 199 // bg
+            emphasis_0 69 133 136  // blue
+            emphasis_1 214 93 14   // orange
+            emphasis_2 104 157 106 // aqua
+            emphasis_3 152 151 26  // green
+        }
+        frame_selected {
+            base 69 133 136        // blue
+            background 251 241 199 // bg
+            emphasis_0 60 56 54    // fg
+            emphasis_1 177 98 134  // purple
+            emphasis_2 104 157 106 // aqua
+            emphasis_3 152 151 26  // green
+        }
+        exit_code_success {
+            base 152 151 26        // green
+            background 251 241 199 // bg
+            emphasis_0 60 56 54    // fg
+            emphasis_1 69 133 136  // blue
+            emphasis_2 104 157 106 // aqua
+            emphasis_3 215 153 33  // yellow
+        }
+        exit_code_error {
+            base 204 36 29         // red
+            background 251 241 199 // bg
+            emphasis_0 60 56 54    // fg
+            emphasis_1 69 133 136  // blue
+            emphasis_2 214 93 14   // orange
+            emphasis_3 215 153 33  // yellow
+        }
+    }
+}
