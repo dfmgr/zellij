@@ -102,7 +102,7 @@ layout {
                 command_weather_rendermode "static"
 
                 // Uptime (like tmux uptime)
-                command_uptime_command   "uptime -p"
+                command_uptime_command   "uptime -p | sed 's/up //;s/ hours\\?/h/;s/ minutes\\?/m/;s/ days\\?/d/;s/ weeks\\?/w/;s/,//g'"
                 command_uptime_format    "#[fg=#ffb86c]{stdout}"
                 command_uptime_interval  "60"
                 command_uptime_rendermode "static"
