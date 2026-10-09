@@ -89,7 +89,7 @@ layout {
                 command_host_rendermode  "static"
 
                 // Git branch (like tmux simple_git_status)
-                command_git_command      "git rev-parse --abbrev-ref HEAD 2>/dev/null || echo ''"
+                command_git_command      "bash -c 'git rev-parse --abbrev-ref HEAD 2>/dev/null || true'"
                 command_git_format       " {stdout}"
                 command_git_interval     "5"
                 command_git_rendermode   "static"
