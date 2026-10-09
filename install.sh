@@ -235,9 +235,9 @@ __setup_plugin_permissions() {
   local ZJSTATUS_WASM="$PLUGIN_DIR/zjstatus.wasm"
   # Create cache directory if needed
   mkdir -p "$CACHE_DIR" 2>/dev/null || return 1
-  # Check if zjstatus permissions already exist
-  if [ -f "$PERM_FILE" ] && grep -q "zjstatus.wasm" "$PERM_FILE" 2>/dev/null; then
-    return 0  # Already configured
+  # Drop any existing zjstatus entry (stale paths included) so the real path is always written
+  if [ -f "$PERM_FILE" ]; then
+    sed -i '/zjstatus\.wasm" {$/,/^}/d' "$PERM_FILE" 2>/dev/null || return 1
   fi
   # Append zjstatus permissions
   cat >> "$PERM_FILE" << EOF
