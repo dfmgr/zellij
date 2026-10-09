@@ -32,7 +32,6 @@ PREFIX: Ctrl+Space (enters TMUX/PRE mode)
 │ PREFIX +/z         Zoom/fullscreen pane                                       │
 │ PREFIX f           Toggle floating panes                                      │
 │ PREFIX F           Toggle pane embed/floating                                 │
-│ Ctrl+h/j/k/l       Navigate panes (no prefix, vim-style)                      │
 └───────────────────────────────────────────────────────────────────────────────┘
 
 ┌─ PANE RESIZING ───────────────────────────────────────────────────────────────┐
@@ -46,7 +45,6 @@ PREFIX: Ctrl+Space (enters TMUX/PRE mode)
 
 ┌─ SCROLL/COPY MODE ────────────────────────────────────────────────────────────┐
 │ PREFIX [           Enter scroll mode                                          │
-│ Alt+[              Enter scroll mode (no prefix)                              │
 │ (in scroll mode)                                                              │
 │   j/k or ↑↓        Scroll up/down                                             │
 │   Ctrl+d/u         Half page down/up                                          │
@@ -67,10 +65,11 @@ PREFIX: Ctrl+Space (enters TMUX/PRE mode)
 
 ┌─ SPECIAL FEATURES ────────────────────────────────────────────────────────────┐
 │ PREFIX m           Toggle mouse mode                                          │
-│ PREFIX ?           Show this help                                             │
+│ PREFIX ?           Show this help (keybinds.md)                               │
 │ PREFIX Space       Next swap layout                                           │
 │ Alt+n              New pane (no prefix)                                       │
 │ Alt+[/]            Previous/next layout (no prefix)                           │
+│ Ctrl+g             Lock/unlock (pass all keys to program)                     │
 │ Ctrl+q             Quit zellij                                                │
 └───────────────────────────────────────────────────────────────────────────────┘
 

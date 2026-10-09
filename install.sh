@@ -232,7 +232,7 @@ __download_zjstatus() {
 __setup_plugin_permissions() {
   local CACHE_DIR="$HOME/.cache/zellij"
   local PERM_FILE="$CACHE_DIR/permissions.kdl"
-  local PLUGIN_PATH='"$HOME/.config/zellij/plugins/zjstatus.wasm"'
+  local ZJSTATUS_WASM="$PLUGIN_DIR/zjstatus.wasm"
   # Create cache directory if needed
   mkdir -p "$CACHE_DIR" 2>/dev/null || return 1
   # Check if zjstatus permissions already exist
@@ -240,8 +240,8 @@ __setup_plugin_permissions() {
     return 0  # Already configured
   fi
   # Append zjstatus permissions
-  cat >> "$PERM_FILE" << 'EOF'
-"$HOME/.config/zellij/plugins/zjstatus.wasm" {
+  cat >> "$PERM_FILE" << EOF
+"$ZJSTATUS_WASM" {
     ReadApplicationState
     RunCommands
     ChangeApplicationState

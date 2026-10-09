@@ -11,6 +11,7 @@ PREFIX: Ctrl+Space (enters TMUX mode, then press key)
 │ PREFIX d           Detach from session                                        │
 │ PREFIX Tab         Enter session mode                                         │
 │ PREFIX s           Open session manager (floating)                            │
+│ Ctrl+g             Lock/unlock (pass all keys to program)                     │
 │ Ctrl+q             Quit zellij (from most modes)                              │
 └───────────────────────────────────────────────────────────────────────────────┘
 
@@ -37,7 +38,6 @@ PREFIX: Ctrl+Space (enters TMUX mode, then press key)
 ┌─ PANE NAVIGATION ─────────────────────────────────────────────────────────────┐
 │ PREFIX ←↑↓→        Select pane (arrow keys)                                   │
 │ PREFIX Ctrl+h/j/k/l Select pane (vim keys with Ctrl)                          │
-│ Ctrl+h/j/k/l       Navigate panes (no prefix, vim-style)                      │
 │ Alt+h/l            Navigate panes or tabs (no prefix)                         │
 │ Alt+j/k            Navigate panes up/down (no prefix)                         │
 └───────────────────────────────────────────────────────────────────────────────┘
@@ -79,7 +79,6 @@ PREFIX: Ctrl+Space (enters TMUX mode, then press key)
 
 ┌─ SCROLL MODE (Copy Mode) ─────────────────────────────────────────────────────┐
 │ PREFIX [           Enter scroll mode                                          │
-│ Alt+[              Enter scroll mode (no prefix)                              │
 │                                                                               │
 │ In SCROLL mode:                                                               │
 │   j/k or ↑↓        Scroll up/down                                             │
@@ -143,7 +142,7 @@ PREFIX: Ctrl+Space (enters TMUX mode, then press key)
 
 ┌─ SPECIAL FEATURES ────────────────────────────────────────────────────────────┐
 │ PREFIX m           Toggle mouse mode on/off                                   │
-│ PREFIX ?           Open configuration plugin                                  │
+│ PREFIX ?           Show keybindings (keybinds.md)                             │
 └───────────────────────────────────────────────────────────────────────────────┘
 
 ┌─ MOUSE SUPPORT ───────────────────────────────────────────────────────────────┐
@@ -180,7 +179,7 @@ PREFIX: Ctrl+Space (enters TMUX mode, then press key)
 | Split horizontal | `PREFIX \` | `PREFIX \` |
 | Split vertical | `PREFIX /` | `PREFIX /` |
 | Navigate panes | `PREFIX arrows` | `PREFIX arrows` |
-| Vim navigation | `Ctrl+h/j/k/l` | `Ctrl+h/j/k/l` |
+| Vim navigation | `Ctrl+h/j/k/l` | `Alt+h/j/k/l` |
 | Resize panes | `PREFIX h/j/k/l` | `PREFIX h/j/k/l` |
 | Close pane | `PREFIX x` | `PREFIX x` |
 | Close window/tab | `PREFIX @` | `PREFIX @` |
@@ -204,7 +203,12 @@ Access at: `http://127.0.0.1:59421`
 
 ## Theme Switching
 
-Change the theme in `config.kdl`:
+Run `zjtheme <name>` (from `shell/zellij.bash`) to set the theme in
+`config.kdl` and recolor the zjstatus bar, then restart zellij. Run
+`zjtheme` with no argument to list themes. The status bar is rendered
+from `layouts/default.kdl.tmpl`.
+
+Or set it by hand in `config.kdl` (the status bar stays Dracula):
 
 ```kdl
 theme "dracula"         // Default
